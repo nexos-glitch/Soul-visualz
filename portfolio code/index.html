@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soul Visual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="loading">
+    <!-- Intro Transition Screen -->
+    <div id="introScreen" class="intro-screen">
+        <div class="intro-content">
+            <h1 class="intro-hello">Hello there.</h1>
+            <h1 class="intro-text">Let's create something amazing</h1>
+            <div class="intro-loader"></div>
+        </div>
+    </div>
+
+    <canvas id="dotCanvas"></canvas>
+    <div class="content-wrapper">
+        <nav class="navbar">
+            <div class="logo">
+                Soul
+            </div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#" id="navWorkBtn">Work</a>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#faq">FAQ</a>
+                <a href="#about">About</a>
+            </div>
+            <button class="contact" id="navContactBtn">Contact Me</button>
+        </nav>
+
+        <main class="hero">
+            <!-- Background glows -->
+            <div class="hero-glow glow-1"></div>
+            <div class="hero-glow glow-2"></div>
+
+            <!-- Floating elements -->
+            <div class="floating-elements">
+                <div class="float-wrapper wrapper-1">
+                    <div class="float-card animate-text delay-2">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        Expert Editor
+                    </div>
+                </div>
+                <div class="float-wrapper wrapper-2">
+                    <div class="float-card animate-text delay-3">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                        100+ Projects
+                    </div>
+                </div>
+                <div class="float-wrapper wrapper-3">
+                    <div class="float-card animate-text delay-4">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                        2M+ Views
+                    </div>
+                </div>
+            </div>
+
+            <div class="availability-badge animate-text delay-1">
+                <div class="status-dot"></div>
+                Available for Projects
+            </div>
+
+            <h2 class="subtitle animate-text delay-2" style="margin-bottom: 0;">I'm</h2>
+            <h1 class="title animate-text delay-3">Soul visuals</h1>
+            <h2 class="subtitle bold animate-text delay-4">Dedicated Graphic Designer & Video Editor.</h2>
+            <p class="hero-description animate-text delay-5">I specialize in creative design with seamless technical
+                execution to craft exceptional digital experiences.</p>
+            <p class="small animate-text delay-5">Turning ideas into viral visuals</p>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-wrapper animate-text delay-6">
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <span>Scroll Down</span>
+                </div>
+            </div>
+        </main>
+
+        <section class="video-section">
+            <div class="video-container">
+                <div class="video-inner">
+                    <!-- Local custom video I've prepared from your Downloads folder! -->
+                    <video id="scrollVideo" muted loop playsinline>
+                        <source src="custom_video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <a href="#" class="cta-btn primary" id="seeWorkBtn"><span>See Work</span></a>
+            <a href="#" class="cta-btn secondary" id="contactNowBtn"><span>Contact Now</span></a>
+        </section>
+
+        <section class="gallery-section" id="portfolio">
+            <h2 class="gallery-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; opacity: 0.8;">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                    <path d="M2 2l7.5 1.5" />
+                    <path d="M14 11l5 5" />
+                </svg>
+                Graphic Work
+            </h2>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="crypto">Crypto & Finance</button>
+                <button class="filter-btn" data-filter="gaming">Gaming</button>
+                <button class="filter-btn" data-filter="tech">Tech & AI</button>
+                <button class="filter-btn" data-filter="poster">Poster</button>
+                <button class="filter-btn" data-filter="irl">IRL</button>
+            </div>
+            <div class="gallery-container">
+                <img src="1616851659719.jpg" class="interactive-img" data-category="crypto" alt="Thumbnail 1">
+                <img src="23678052_crypto_set.jpg" class="interactive-img" data-category="crypto" alt="Thumbnail 2">
+                <img src="26371-3-uchiha-sasuke-hd.jpg" class="interactive-img" data-category="crypto"
+                    alt="Thumbnail 3">
+                <img src="7ffe4c21bdd3c33874b495a26f26d2dd.jpg" class="interactive-img" data-category="crypto"
+                    alt="Thumbnail 4">
+                <img src="84de1fd6e54d9c0f44704fcab10b95f6.jpg" class="interactive-img" data-category="crypto"
+                    alt="Thumbnail 5">
+                <img src="DSC05636.jpg" class="interactive-img" data-category="crypto" alt="Thumbnail 6">
+                <img src="altcoin vs Bitcoin trading thumbnail 4.jpg" class="interactive-img" data-category="crypto"
+                    alt="Thumbnail 7">
+                <img src="best ai tool.jpg" class="interactive-img" data-category="tech" alt="Thumbnail 8">
+                <img src="stake thumbnail.jpg" class="interactive-img" data-category="crypto" alt="Thumbnail 9">
+                <img src="vault thumbnail.jpg" class="interactive-img" data-category="crypto" alt="Thumbnail 10">
+                <img src="blink valorant.jpg" class="interactive-img" data-category="gaming" alt="Thumbnail 11">
+                <img src="marvel rival thumbnail.jpg" class="interactive-img" data-category="gaming" alt="Thumbnail 12">
+                <img src="blink among us.jpg" class="interactive-img" data-category="gaming" alt="Thumbnail 13">
+                <img src="blink is live 10k.jpg" class="interactive-img" data-category="gaming" alt="Thumbnail 14">
+                <img src="carry the glass.jpg" class="interactive-img" data-category="gaming" alt="Thumbnail 15">
+                <img src="marvel rival thumbnail 1.jpg" class="interactive-img" data-category="gaming"
+                    alt="Thumbnail 16">
+                <img src="mini royale thumbnail.jpg" class="interactive-img" data-category="gaming" alt="Thumbnail 17">
+                <img src="oggy thumbnail.jpg" class="interactive-img" data-category="gaming" alt="Thumbnail 18">
+                <img src="wu chang.jpg" class="interactive-img" data-category="gaming" alt="Thumbnail 19">
+                <img src="wu kong.jpg" class="interactive-img" data-category="gaming" alt="Thumbnail 20">
+                <img src="wuuu.jpg" class="interactive-img" data-category="gaming" alt="Thumbnail 21">
+                <img src="4wolf poster bgis.jpg" class="interactive-img" data-category="poster" alt="Thumbnail 22">
+                <img src="aditya  pfp.jpg" class="interactive-img" data-category="poster" alt="Thumbnail 23">
+                <img src="white walkers poster.jpg" class="interactive-img" data-category="poster" alt="Thumbnail 24">
+                <img src="enhanced_irl thumbnail.png" class="interactive-img" data-category="irl" alt="Thumbnail 26">
+            </div>
+        </section>
+
+        <section class="gallery-section" id="video-portfolio">
+            <h2 class="gallery-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; opacity: 0.8;">
+                    <path d="m22 8-6 4 6 4V8Z" />
+                    <rect width="14" height="12" x="2" y="6" rx="2" ry="2" />
+                </svg>
+                Video Work
+            </h2>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="long-form">Long Form</button>
+                <button class="filter-btn" data-filter="motion-graphic">Motion Graphic</button>
+                <button class="filter-btn" data-filter="short-form">Short Form</button>
+                <button class="filter-btn" data-filter="edits">Edits</button>
+                <button class="filter-btn" data-filter="stream-overlay">Stream Overlay</button>
+
+            </div>
+            <div class="gallery-container">
+                <div class="interactive-img" data-category="motion-graphic"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="motion graphics.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="short-form"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="short video.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="short-form"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="short 2.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="long-form"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="gaming 1.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="long-form"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="gaming 2.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="long-form"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="gaming 3.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="edits"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="m35.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="edits"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="ronaldo edit.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="edits"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="andrew garfield edit.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="edits"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="heath leger edit.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="edits"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="f1 snoy haes edit.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="edits"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="bgmi edit 2.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true" style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;"><video muted loop autoplay playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 1;"><source src="2nd screen.mp4" type="video/mp4"></video><button class="audio-btn" title="Toggle Audio"><svg class="mute-icon" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" /></svg><svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;"><path d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" /></svg></button></div>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true" style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;"><video muted loop autoplay playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 1;"><source src="Stream Overlay.mp4" type="video/mp4"></video><button class="audio-btn" title="Toggle Audio"><svg class="mute-icon" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" /></svg><svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;"><path d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" /></svg></button></div>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true" style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;"><video muted loop autoplay playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 1;"><source src="Stream Starting Screen.mp4" type="video/mp4"></video><button class="audio-btn" title="Toggle Audio"><svg class="mute-icon" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" /></svg><svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;"><path d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" /></svg></button></div>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true" style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;"><video muted loop autoplay playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 1;"><source src="stream endiing.mp4" type="video/mp4"></video><button class="audio-btn" title="Toggle Audio"><svg class="mute-icon" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" /></svg><svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;"><path d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" /></svg></button></div>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true" style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;"><video muted loop autoplay playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 1;"><source src="stream we will be right back.mp4" type="video/mp4"></video><button class="audio-btn" title="Toggle Audio"><svg class="mute-icon" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" /></svg><svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;"><path d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" /></svg></button></div>
+
+
+            </div>
+        </section>
+
+        <section class="services-section" id="services">
+            <h1 class="services-main-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="width: 40px; height: 40px; margin-bottom: 5px; display: block; margin-left: auto; margin-right: auto; color: #ff3e3e;">
+                    <path d="M12 2v2" />
+                    <path d="m4.93 4.93 1.41 1.41" />
+                    <path d="M2 12h2" />
+                    <path d="m4.93 19.07 1.41-1.41" />
+                    <path d="M12 20v2" />
+                    <path d="m17.66 17.66 1.41 1.41" />
+                    <path d="M20 12h2" />
+                    <path d="m17.66 6.34 1.41-1.41" />
+                </svg>
+                My <span class="highlight">Services</span>
+            </h1>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-item">
+                    <div class="service-icon-box pink">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 7l-7 5 7 5V7z" />
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                        </svg>
+                    </div>
+                    <h3>Short-Form Video Editing</h3>
+                    <p>Engaging vertical content for TikTok, Reels, and Shorts with dynamic pacing and viral-style
+                        elements.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-item">
+                    <div class="service-icon-box orange">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M10 8l6 4-6 4V8z" />
+                        </svg>
+                    </div>
+                    <h3>Cinematic / Advanced Edits</h3>
+                    <p>High-end storytelling with professional color grading, seamless transitions, and immersive sound
+                        design.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-item">
+                    <div class="service-icon-box purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z" />
+                            <path d="M16 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z" />
+                            <path d="M10 1h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2z" />
+                            <rect x="10" y="14" width="4" height="7" />
+                            <circle cx="5" cy="5" r="2" />
+                        </svg>
+                    </div>
+                    <h3>Long Form Content</h3>
+                    <p>Fast-paced, energetic gaming content with highlight reels and trend-based editing.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-item">
+                    <div class="service-icon-box coral">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                            <circle cx="8.5" cy="8.5" r="1.5" />
+                            <polyline points="21 15 16 10 5 21" />
+                        </svg>
+                    </div>
+                    <h3>Thumbnails</h3>
+                    <p>High-CTR, attention-grabbing designs tailored to your niche to maximize views and audience
+                        clicks.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-item">
+                    <div class="service-icon-box yellow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                        </svg>
+                    </div>
+                    <h3>Social Media Design</h3>
+                    <p>Strategic visuals, branding assets, and optimized layouts for all your social platforms.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-item">
+                    <div class="service-icon-box violet">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3>Poster and ad design</h3>
+                    <p>Stunning posters and high-converting ad creatives designed to capture attention and boost brands.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Me Section -->
+        <section class="why-choose-section">
+            <h2 class="why-title">Why Choose Soul Visuals</h2>
+            <p class="why-subtitle">I don't just edit videos, I engineer content that performs and craft visuals that
+                captivate.</p>
+
+            <div class="why-grid">
+                <!-- Card 1 -->
+                <div class="why-card">
+                    <div class="why-icon-box pink">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Clean Storytelling</h3>
+                    <p>Every cut serves a purpose. I eliminate noise and focus on narrative flow that keeps viewers
+                        engaged throughout the entire video.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="why-card">
+                    <div class="why-icon-box orange">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Retention-Focused Pacing</h3>
+                    <p>Strategic pacing that maximizes watch time. I understand platform algorithms and edit
+                        accordingly to keep retention curves high.</p>
+                </div>
+
+                <!-- Card 3 (Graphic Works) -->
+                <div class="why-card">
+                    <div class="why-icon-box purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                    <h3>High-CTR Thumbnails</h3>
+                    <p>Thumbnails that command attention and boost click-through rates. Designed with psychology-driven
+                        layouts to stop the scroll.</p>
+                </div>
+
+                <!-- Card 4 (Graphic Works) -->
+                <div class="why-card">
+                    <div class="why-icon-box blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Brand Identity Design</h3>
+                    <p>Cohesive visual branding across all platforms. I ensure your graphics, banners, and profile
+                        assets build a premium, recognizable identity.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Designer Section -->
+        <section class="about-designer-section" id="about">
+            <div class="about-designer-header">
+                <div class="expert-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    Visual Creator
+                </div>
+                <h2 class="about-main-title">Soul, Your Creative Partner</h2>
+                <p class="about-subtitle">Brief initial presentation of myself and my previous experiences.</p>
+            </div>
+
+            <div class="about-bento-grid">
+                <!-- Left Profile Card -->
+                <div class="about-profile-card">
+                    <div class="profile-image-container">
+                        <img src="MY PFP.png" alt="Soul" class="profile-img">
+                        <div class="availability-pill">
+                            <span class="status-dot-green"></span>
+                            Available for work
+                        </div>
+                    </div>
+                    <div class="profile-content">
+                        <h3>Hello I am Soul</h3>
+                        <p>Graphic Designer and Video Editor Based in India</p>
+
+                        <div class="profile-socials">
+                            <a href="https://x.com/souls_visuals" target="_blank" rel="noopener noreferrer"
+                                class="social-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                </svg>
+                            </a>
+                            <div class="social-divider"></div>
+                            <a href="https://www.instagram.com/visualz.soul/" target="_blank" rel="noopener noreferrer"
+                                class="social-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <div class="social-divider"></div>
+                            <a href="#" class="social-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <a href="#contact" class="connect-btn">Connect with me</a>
+                    </div>
+                </div>
+
+                <!-- Right Info Card -->
+                <div class="about-info-card">
+                    <p class="about-bio">I'm Soul, passionate about crafting digital experiences from India. I love
+                        transforming ideas into stunning visuals and engaging narratives that connect with people. With
+                        a blend of creativity and precise technical skills, I build creations that not only look great
+                        but also tell powerful stories.</p>
+
+                    <div class="about-role-buttons">
+                        <a href="#portfolio" class="role-btn primary">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                                <path d="M2 2l7.5 1.5"></path>
+                                <path d="M14 11l5 5"></path>
+                            </svg>
+                            Graphic Designer
+                        </a>
+                        <a href="#video-portfolio" class="role-btn secondary">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m22 8-6 4 6 4V8Z"></path>
+                                <rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect>
+                            </svg>
+                            Video Editor
+                        </a>
+                    </div>
+
+                    <hr class="about-divider">
+
+                    <div class="interactive-stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon pink-pulse">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-num">2M+</span>
+                                <span class="stat-text">Views Generated</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon blue-pulse">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-num">100+</span>
+                                <span class="stat-text">Projects Done</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="about-divider">
+
+                    <div class="tools-arsenal">
+                        <h4 class="tools-title">Expertise Arsenal</h4>
+                        <div class="tools-grid">
+                            <div class="tool-item pr"><span>Pr</span>
+                                <div class="tooltip">Premiere Pro</div>
+                            </div>
+                            <div class="tool-item ae"><span>Ae</span>
+                                <div class="tooltip">After Effects</div>
+                            </div>
+                            <div class="tool-item ps"><span>Ps</span>
+                                <div class="tooltip">Photoshop</div>
+                            </div>
+                            <div class="tool-item ai"><span>Ai</span>
+                                <div class="tooltip">Illustrator</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="testi-bento-grid">
+                <!-- Left Details Box -->
+                <div class="testi-left-box">
+                    <div class="expert-badge testi-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="m9 12 2 2 4-4"></path>
+                        </svg>
+                        Happy Clients
+                    </div>
+                    <div class="testi-header">
+                        <h2>Clients <span>Love me</span></h2>
+                        <p>Trusted by 20+ happy clients, adding 2lakh+ in revenue.</p>
+                    </div>
+
+                    <div class="testi-stats">
+                        <div class="t-stat">
+                            <span class="t-num">20+</span>
+                            <span class="t-label">Happy clients</span>
+                        </div>
+                        <div class="t-stat">
+                            <span class="t-num">2lakh</span>
+                            <span class="t-label">revenue added</span>
+                        </div>
+                        <div class="t-stat">
+                            <span class="t-num">4.8</span>
+                            <span class="t-label">Average Rating</span>
+                        </div>
+                    </div>
+
+                    <div class="testi-buttons">
+                        <a href="#portfolio" class="t-btn primary">See All Projects</a>
+                        <a href="#contact" class="t-btn secondary">Contact Now</a>
+                    </div>
+                </div>
+
+                <!-- Right Testimonials List -->
+                <div class="testi-right-box">
+                    <div class="testi-list">
+                        <!-- Card 1 -->
+                        <div class="testi-card">
+                            <div class="testi-card-header">
+                                <img src="sakshi.jpg" alt="Sakshi Plays" class="reviewer-img">
+                                <div class="reviewer-info">
+                                    <h4>Sakshi Plays</h4>
+                                    <span>Youtuber</span>
+                                </div>
+                            </div>
+                            <div class="testi-rating">
+                                <span class="rating-num">5.0</span>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                            <p class="testi-text">The designs exceeded our expectations! Every element felt purposeful,
+                                creating a seamless and visually stunning</p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="testi-card">
+                            <div class="testi-card-header">
+                                <img src="moonislive.jpg" alt="Moonislive" class="reviewer-img">
+                                <div class="reviewer-info">
+                                    <h4>Moonislive</h4>
+                                    <span>Youtuber</span>
+                                </div>
+                            </div>
+                            <div class="testi-rating">
+                                <span class="rating-num">4.7</span>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                            <p class="testi-text">Working with this process was effortless. The vision was understood
+                                perfectly, and the designs truly is stunning</p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="testi-card">
+                            <div class="testi-card-header">
+                                <img src="blink.jpg" alt="Blinkislive" class="reviewer-img">
+                                <div class="reviewer-info">
+                                    <h4>Blinkislive</h4>
+                                    <span>Youtuber</span>
+                                </div>
+                            </div>
+                            <div class="testi-rating">
+                                <span class="rating-num">5.0</span>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                            <p class="testi-text">Exceptional creativity and attention to detail! The final product not
+                                only looks great but also enhances user engagement</p>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="testi-card">
+                            <div class="testi-card-header">
+                                <img src="crypteum.jpg" alt="TheCrypteum" class="reviewer-img">
+                                <div class="reviewer-info">
+                                    <h4>TheCrypteum</h4>
+                                    <span>Youtuber</span>
+                                </div>
+                            </div>
+                            <div class="testi-rating">
+                                <span class="rating-num">5.0</span>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                            <p class="testi-text">A game-changing experience! The design process was smooth,
+                                collaborative, and resulted in a presence we're proud of</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section class="comparison-section" id="comparison">
+            <div class="comp-header">
+                <div class="expert-badge comp-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 16v-4"></path>
+                        <path d="M12 8h.01"></path>
+                    </svg>
+                    Why Choose Me
+                </div>
+                <h2>Why Me As Your <span>Creative Partner</span></h2>
+                <p>Partnering for excellence in video editing and graphic design.</p>
+            </div>
+
+            <div class="comp-container">
+                <!-- Row 1 -->
+                <div class="comp-row">
+                    <div class="comp-pro">
+                        <div class="comp-icon check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Skilled Professional</h3>
+                            <p>Gain access to top-tier talent with years of experience, ensuring flawless execution in
+                                both design and video.</p>
+                        </div>
+                    </div>
+                    <div class="comp-divider"></div>
+                    <div class="comp-con">
+                        <div class="comp-icon cross">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Amateur Creator</h3>
+                            <p>Lack of experience may result in sloppy edits, inconsistent branding, and overlooked
+                                details.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="comp-row">
+                    <div class="comp-pro">
+                        <div class="comp-icon check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Future-Ready Aesthetics</h3>
+                            <p>Crafting modern, scalable graphics and dynamic edits that grow with your business and
+                                stay ahead of trends.</p>
+                        </div>
+                    </div>
+                    <div class="comp-divider"></div>
+                    <div class="comp-con">
+                        <div class="comp-icon cross">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Outdated Concepts</h3>
+                            <p>Stale designs and poorly paced videos that don't reflect current trends or your evolving
+                                brand narrative.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="comp-row">
+                    <div class="comp-pro">
+                        <div class="comp-icon check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Client-Centric Collaboration</h3>
+                            <p>Your vision leads the way—I work closely with you to bring ideas to life with precision
+                                and creativity.</p>
+                        </div>
+                    </div>
+                    <div class="comp-divider"></div>
+                    <div class="comp-con">
+                        <div class="comp-icon cross">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Detached Communication</h3>
+                            <p>Lack of collaboration and poor feedback loops can result in misaligned outcomes and
+                                creative friction.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="comp-row">
+                    <div class="comp-pro">
+                        <div class="comp-icon check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Timely Project Tracking</h3>
+                            <p>Stay informed with regular progress updates, fast turnaround times, and consistently
+                                timely deliverables.</p>
+                        </div>
+                    </div>
+                    <div class="comp-divider"></div>
+                    <div class="comp-con">
+                        <div class="comp-icon cross">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Unstructured & Unreliable Work</h3>
+                            <p>Inconsistent timelines and last-minute changes can compromise the quality of the final
+                                export.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="faq-bento-grid">
+                <!-- Left Details Box -->
+                <div class="faq-left-box">
+                    <div class="expert-badge faq-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                        FAQ Section
+                    </div>
+                    <div class="faq-header">
+                        <h2>Questions, <span>Answers</span></h2>
+                        <p>Get quick answers to your most pressing questions</p>
+                    </div>
+
+                    <!-- Testimonial Card inside FAQ -->
+                    <div class="faq-testi-card">
+                        <div class="testi-card-header">
+                            <img src="sakshi.jpg" alt="Sakshi Plays" class="reviewer-img">
+                            <div class="reviewer-info">
+                                <h4>Sakshi Plays</h4>
+                                <span>Youtuber</span>
+                            </div>
+                        </div>
+                        <div class="testi-rating">
+                            <span class="rating-num">5.0</span>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p class="testi-text">Exceptional creativity and attention to detail! The final product not only
+                            looks great but also enhances user engagement</p>
+                    </div>
+
+                    <div class="faq-buttons">
+                        <a href="#portfolio" class="t-btn primary">See All Projects</a>
+                        <a href="#contact" class="t-btn secondary">Contact Now</a>
+                    </div>
+                </div>
+
+                <!-- Right FAQ Accordion Box -->
+                <div class="faq-right-box">
+                    <div class="faq-accordion">
+                        <div class="faq-item active">
+                            <div class="faq-question">
+                                <h3>What services do you offer?</h3>
+                                <span class="faq-icon"></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>I specialize in graphic designing and video editing and can create stunning visuals
+                                    for you.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How do I start working with you?</h3>
+                                <span class="faq-icon"></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Simply reach out via the contact form or email me directly. We'll set up a quick chat
+                                    to discuss your vision, requirements, and next steps.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What design tools do you use?</h3>
+                                <span class="faq-icon"></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>I utilize industry-standard creative tools like Adobe Premiere Pro, After Effects,
+                                    Photoshop, and Illustrator to deliver top-tier quality.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How long does a project take?</h3>
+                                <span class="faq-icon"></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Turnaround time varies based on project complexity. Standard graphics usually take
+                                    1-3 days, while comprehensive videos may take up to a week.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Do you provide revisions?</h3>
+                                <span class="faq-icon"></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes! Client satisfaction is my priority. Every project includes structured revision
+                                    rounds to ensure the final product perfectly aligns with your vision.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What industries do you work with?</h3>
+                                <span class="faq-icon"></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>I have experience across diverse sectors including content creation, finance, gaming,
+                                    tech, and e-commerce.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What is your pricing structure?</h3>
+                                <span class="faq-icon"></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Rates depend entirely on the scope of the project. Please contact me with your brief
+                                    and I'll provide a customized, transparent quote.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Site Footer -->
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <img src="MY PFP.png" alt="Souls" class="footer-avatar">
+                        <span class="footer-name">Souls</span>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="https://x.com/souls_visuals" target="_blank" rel="noopener noreferrer"
+                            class="footer-social-icon" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/visualz.soul/" target="_blank" rel="noopener noreferrer"
+                            class="footer-social-icon" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-middle">
+                    <a href="#services">Services</a>
+                    <a href="#" id="footerWorkBtn">Projects</a>
+                    <a href="#about">Profile</a>
+                    <a href="#testimonials">Reviews</a>
+                    <a href="#" id="footerContactBtn">Contact</a>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-copyright">
+                        &copy; 2025 Souls
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Full Screen Gallery Overlay -->
+    <div id="fullGalleryScreen" class="full-screen-gallery">
+        <canvas id="galleryDotCanvas" class="gallery-canvas"></canvas>
+        <div class="gallery-navbar">
+            <div class="logo" style="color: #111; font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px;">Soul
+                Visuals</div>
+            <button id="closeGalleryBtn" class="close-gallery-btn">← Back to Home</button>
+        </div>
+        <section class="gallery-section">
+            <h2 class="gallery-title">Graphic Work</h2>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="crypto">Crypto & Finance</button>
+                <button class="filter-btn" data-filter="gaming">Gaming</button>
+                <button class="filter-btn" data-filter="tech">Tech & AI</button>
+                <button class="filter-btn" data-filter="poster">Poster</button>
+                <button class="filter-btn" data-filter="irl">IRL</button>
+            </div>
+            <div class="gallery-container">
+                <img src="1616851659719.jpg" class="interactive-img overlay-img" data-category="crypto"
+                    alt="Thumbnail 1">
+                <img src="23678052_crypto_set.jpg" class="interactive-img overlay-img" data-category="crypto"
+                    alt="Thumbnail 2">
+                <img src="26371-3-uchiha-sasuke-hd.jpg" class="interactive-img overlay-img" data-category="crypto"
+                    alt="Thumbnail 3">
+                <img src="7ffe4c21bdd3c33874b495a26f26d2dd.jpg" class="interactive-img overlay-img"
+                    data-category="crypto" alt="Thumbnail 4">
+                <img src="84de1fd6e54d9c0f44704fcab10b95f6.jpg" class="interactive-img overlay-img"
+                    data-category="crypto" alt="Thumbnail 5">
+                <img src="DSC05636.jpg" class="interactive-img overlay-img" data-category="crypto" alt="Thumbnail 6">
+                <img src="altcoin vs Bitcoin trading thumbnail 4.jpg" class="interactive-img overlay-img"
+                    data-category="crypto" alt="Thumbnail 7">
+                <img src="best ai tool.jpg" class="interactive-img overlay-img" data-category="tech" alt="Thumbnail 8">
+                <img src="stake thumbnail.jpg" class="interactive-img overlay-img" data-category="crypto"
+                    alt="Thumbnail 9">
+                <img src="vault thumbnail.jpg" class="interactive-img overlay-img" data-category="crypto"
+                    alt="Thumbnail 10">
+                <img src="blink valorant.jpg" class="interactive-img overlay-img" data-category="gaming"
+                    alt="Thumbnail 11">
+                <img src="marvel rival thumbnail.jpg" class="interactive-img overlay-img" data-category="gaming"
+                    alt="Thumbnail 12">
+                <img src="blink among us.jpg" class="interactive-img overlay-img" data-category="gaming"
+                    alt="Thumbnail 13">
+                <img src="blink is live 10k.jpg" class="interactive-img overlay-img" data-category="gaming"
+                    alt="Thumbnail 14">
+                <img src="carry the glass.jpg" class="interactive-img overlay-img" data-category="gaming"
+                    alt="Thumbnail 15">
+                <img src="marvel rival thumbnail 1.jpg" class="interactive-img overlay-img" data-category="gaming"
+                    alt="Thumbnail 16">
+                <img src="mini royale thumbnail.jpg" class="interactive-img overlay-img" data-category="gaming"
+                    alt="Thumbnail 17">
+                <img src="oggy thumbnail.jpg" class="interactive-img overlay-img" data-category="gaming"
+                    alt="Thumbnail 18">
+                <img src="wu chang.jpg" class="interactive-img overlay-img" data-category="gaming" alt="Thumbnail 19">
+                <img src="wu kong.jpg" class="interactive-img overlay-img" data-category="gaming" alt="Thumbnail 20">
+                <img src="wuuu.jpg" class="interactive-img overlay-img" data-category="gaming" alt="Thumbnail 21">
+                <img src="4wolf poster bgis.jpg" class="interactive-img overlay-img" data-category="poster"
+                    alt="Thumbnail 22">
+                <img src="aditya  pfp.jpg" class="interactive-img overlay-img" data-category="poster"
+                    alt="Thumbnail 23">
+                <img src="white walkers poster.jpg" class="interactive-img overlay-img" data-category="poster"
+                    alt="Thumbnail 24">
+                <img src="enhanced_irl thumbnail.png" class="interactive-img overlay-img" data-category="irl"
+                    alt="Thumbnail 26">
+            </div>
+        </section>
+
+        <!-- Video Portfolio in Full Screen -->
+        <section class="gallery-section" id="video-portfolio-overlay">
+            <h2 class="gallery-title">Video Work</h2>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="long-form">Long Form</button>
+                <button class="filter-btn" data-filter="motion-graphic">Motion Graphic</button>
+                <button class="filter-btn" data-filter="short-form">Short Form</button>
+                <button class="filter-btn" data-filter="edits">Edits</button>
+                <button class="filter-btn" data-filter="stream-overlay">Stream Overlay</button>
+            </div>
+            <div class="gallery-container">
+                <div class="interactive-img" data-category="motion-graphic"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="motion graphics.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="short-form"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="short video.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="short-form"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="short 2.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="long-form"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="gaming 1.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="long-form"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="gaming 2.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="long-form"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="gaming 3.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="edits"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="m35.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="edits"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="ronaldo edit.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="edits"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="andrew garfield edit.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="edits"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="heath leger edit.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="edits"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="f1 snoy haes edit.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="edits"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="bgmi edit 2.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="stream-overlay/2nd screen.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="stream-overlay/Stream Overlay.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="stream-overlay/Stream Starting Screen.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="stream-overlay/stream endiing.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true"
+                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
+                    <video muted loop autoplay playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                        <source src="stream-overlay/stream we will be right back.mp4" type="video/mp4">
+                    </video>
+                    <button class="audio-btn" title="Toggle Audio">
+                        <svg class="mute-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Full Screen Contact Overlay -->
+    <div id="fullContactScreen" class="full-screen-gallery">
+        <canvas id="contactDotCanvas" class="gallery-canvas"></canvas>
+        <div class="gallery-navbar">
+            <div class="logo" style="color: #111; font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px;">Reach
+                Out</div>
+            <button id="closeContactBtn" class="close-gallery-btn">← Back to Home</button>
+        </div>
+        <div class="contact-content">
+            <h2 class="gallery-title" style="margin-top: 50px;">Let's Talk</h2>
+            <div class="contact-form-container">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" id="contactName" placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="contactEmail" placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="5" id="contactMessage" placeholder="Tell me about your project..."></textarea>
+                    </div>
+                    <button type="button" class="cta-btn primary" id="sendMessageBtn"
+                        style="width: 100%; border: none;"><span>Send
+                            Message</span></button>
+                </form>
+                <div class="contact-info">
+                    <h3>Or reach me directly</h3>
+                    <p><a href="mailto:visualzsoul@gmail.com"
+                            style="color: inherit; text-decoration: none;">visualzsoul@gmail.com</a></p>
+                    <div class="social-links">
+                        <a href="https://x.com/souls_visuals" target="_blank" rel="noopener noreferrer">Twitter</a>
+                        <a href="https://www.instagram.com/visualz.soul/" target="_blank"
+                            rel="noopener noreferrer">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Media Preview Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <button class="modal-nav prev-modal">&#10094;</button>
+        <img class="modal-content" id="modalImage" style="display: none;">
+        <video class="modal-content" id="modalVideo" style="display: none;" controls autoplay></video>
+        <button class="modal-nav next-modal">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
