@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soul Visual</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://player.vimeo.com/api/player.js"></script>
 </head>
 
 <body class="loading">
@@ -100,10 +101,13 @@
         <section class="video-section">
             <div class="video-container">
                 <div class="video-inner">
-                    <!-- Local custom video I've prepared from your Downloads folder! -->
-                    <video id="scrollVideo" muted loop playsinline>
-                        <source src="custom_video.mp4" type="video/mp4">
-                    </video>
+                    <div class="vimeo-embed hero-vimeo">
+                        <iframe src="https://player.vimeo.com/video/1192187997?background=1&badge=0&autopause=0&player_id=0&app_id=58479"
+                            frameborder="0"
+                            allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                            title="Soul Visuals Showreel"
+                            loading="lazy"></iframe>
+                    </div>
                 </div>
             </div>
         </section>
@@ -185,215 +189,57 @@
 
             </div>
             <div class="gallery-container">
-                <div class="interactive-img" data-category="motion-graphic"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="motion graphics.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="motion-graphic">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188074?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Motion Graphics" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="short-form"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="short video.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="short-form">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188112?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Short Video" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="short-form"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="short 2.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="short-form">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188103?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Short 2" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="long-form"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="gaming 1.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="long-form">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188038?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Gaming 1" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="long-form"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="gaming 2.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="long-form">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188042?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Gaming 2" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="long-form"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="gaming 3.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="long-form">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188047?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Gaming 3" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="edits"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="m35.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="edits">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188065?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="M35" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="edits"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="ronaldo edit.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="edits">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188084?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Ronaldo Edit" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="edits"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="andrew garfield edit.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="edits">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192187999?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Andrew Garfield Edit" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="edits"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="heath leger edit.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="edits">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188062?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Heath Ledger Edit" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="edits"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="f1 snoy haes edit.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="edits">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188034?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="F1 Edit" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="edits"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="bgmi edit 2.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="edits">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192187994?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="BGMI Edit 2" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true" style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;"><video muted loop autoplay playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 1;"><source src="2nd screen.mp4" type="video/mp4"></video><button class="audio-btn" title="Toggle Audio"><svg class="mute-icon" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" /></svg><svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;"><path d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" /></svg></button></div>
-                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true" style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;"><video muted loop autoplay playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 1;"><source src="Stream Overlay.mp4" type="video/mp4"></video><button class="audio-btn" title="Toggle Audio"><svg class="mute-icon" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" /></svg><svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;"><path d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" /></svg></button></div>
-                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true" style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;"><video muted loop autoplay playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 1;"><source src="Stream Starting Screen.mp4" type="video/mp4"></video><button class="audio-btn" title="Toggle Audio"><svg class="mute-icon" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" /></svg><svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;"><path d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" /></svg></button></div>
-                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true" style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;"><video muted loop autoplay playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 1;"><source src="stream endiing.mp4" type="video/mp4"></video><button class="audio-btn" title="Toggle Audio"><svg class="mute-icon" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" /></svg><svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;"><path d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" /></svg></button></div>
-                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true" style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;"><video muted loop autoplay playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 1;"><source src="stream we will be right back.mp4" type="video/mp4"></video><button class="audio-btn" title="Toggle Audio"><svg class="mute-icon" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" /></svg><svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;"><path d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" /></svg></button></div>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192187995?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="2nd Screen" loading="lazy"></iframe></div>
+                </div>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188109?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Stream Overlay" loading="lazy"></iframe></div>
+                </div>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188135?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Stream Starting Screen" loading="lazy"></iframe></div>
+                </div>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188110?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Stream Ending" loading="lazy"></iframe></div>
+                </div>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188146?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Stream BRB" loading="lazy"></iframe></div>
+                </div>
 
 
             </div>
@@ -768,7 +614,7 @@
                             </div>
                             <div class="testi-rating">
                                 <span class="rating-num">5.0</span>
-                                <div class="stars">★★★★★</div>
+                                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                             </div>
                             <p class="testi-text">The designs exceeded our expectations! Every element felt purposeful,
                                 creating a seamless and visually stunning</p>
@@ -785,7 +631,7 @@
                             </div>
                             <div class="testi-rating">
                                 <span class="rating-num">4.7</span>
-                                <div class="stars">★★★★★</div>
+                                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                             </div>
                             <p class="testi-text">Working with this process was effortless. The vision was understood
                                 perfectly, and the designs truly is stunning</p>
@@ -802,7 +648,7 @@
                             </div>
                             <div class="testi-rating">
                                 <span class="rating-num">5.0</span>
-                                <div class="stars">★★★★★</div>
+                                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                             </div>
                             <p class="testi-text">Exceptional creativity and attention to detail! The final product not
                                 only looks great but also enhances user engagement</p>
@@ -819,7 +665,7 @@
                             </div>
                             <div class="testi-rating">
                                 <span class="rating-num">5.0</span>
-                                <div class="stars">★★★★★</div>
+                                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                             </div>
                             <p class="testi-text">A game-changing experience! The design process was smooth,
                                 collaborative, and resulted in a presence we're proud of</p>
@@ -921,7 +767,7 @@
                         </div>
                         <div>
                             <h3>Client-Centric Collaboration</h3>
-                            <p>Your vision leads the way—I work closely with you to bring ideas to life with precision
+                            <p>Your vision leads the wayâ€”I work closely with you to bring ideas to life with precision
                                 and creativity.</p>
                         </div>
                     </div>
@@ -1006,7 +852,7 @@
                         </div>
                         <div class="testi-rating">
                             <span class="rating-num">5.0</span>
-                            <div class="stars">★★★★★</div>
+                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                         </div>
                         <p class="testi-text">Exceptional creativity and attention to detail! The final product not only
                             looks great but also enhances user engagement</p>
@@ -1145,7 +991,7 @@
         <div class="gallery-navbar">
             <div class="logo" style="color: #111; font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px;">Soul
                 Visuals</div>
-            <button id="closeGalleryBtn" class="close-gallery-btn">← Back to Home</button>
+            <button id="closeGalleryBtn" class="close-gallery-btn">â† Back to Home</button>
         </div>
         <section class="gallery-section">
             <h2 class="gallery-title">Graphic Work</h2>
@@ -1215,295 +1061,57 @@
                 <button class="filter-btn" data-filter="edits">Edits</button>
                 <button class="filter-btn" data-filter="stream-overlay">Stream Overlay</button>
             </div>
-            <div class="gallery-container">
-                <div class="interactive-img" data-category="motion-graphic"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="motion graphics.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                        <div class="gallery-container">
+                <div class="interactive-img" data-category="motion-graphic">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188074?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Motion Graphics" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="short-form"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="short video.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="short-form">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188112?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Short Video" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="short-form"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="short 2.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="short-form">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188103?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Short 2" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="long-form"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="gaming 1.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="long-form">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188038?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Gaming 1" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="long-form"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="gaming 2.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="long-form">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188042?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Gaming 2" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="long-form"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="gaming 3.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="long-form">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188047?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Gaming 3" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="edits"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="m35.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="edits">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188065?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="M35" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="edits"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="ronaldo edit.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="edits">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188084?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Ronaldo Edit" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="edits"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="andrew garfield edit.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="edits">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192187999?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Andrew Garfield Edit" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="edits"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="heath leger edit.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="edits">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188062?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Heath Ledger Edit" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="edits"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="f1 snoy haes edit.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="edits">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188034?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="F1 Edit" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="edits"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="bgmi edit 2.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="edits">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192187994?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="BGMI Edit 2" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="stream-overlay/2nd screen.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192187995?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="2nd Screen" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="stream-overlay/Stream Overlay.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188109?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Stream Overlay" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="stream-overlay/Stream Starting Screen.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188135?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Stream Starting Screen" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="stream-overlay/stream endiing.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188110?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Stream Ending" loading="lazy"></iframe></div>
                 </div>
-                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true"
-                    style="display: flex; justify-content: center; align-items: center; background: #111; overflow: hidden; padding: 0; cursor: pointer;">
-                    <video muted loop autoplay playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-                        <source src="stream-overlay/stream we will be right back.mp4" type="video/mp4">
-                    </video>
-                    <button class="audio-btn" title="Toggle Audio">
-                        <svg class="mute-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                        </svg>
-                        <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
-                            <path
-                                d="M5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                        </svg>
-                    </button>
+                <div class="interactive-img" data-category="stream-overlay" data-is-vertical="true">
+                    <div class="vimeo-embed"><iframe src="https://player.vimeo.com/video/1192188146?background=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Stream BRB" loading="lazy"></iframe></div>
                 </div>
 
             </div>
@@ -1516,7 +1124,7 @@
         <div class="gallery-navbar">
             <div class="logo" style="color: #111; font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px;">Reach
                 Out</div>
-            <button id="closeContactBtn" class="close-gallery-btn">← Back to Home</button>
+            <button id="closeContactBtn" class="close-gallery-btn">â† Back to Home</button>
         </div>
         <div class="contact-content">
             <h2 class="gallery-title" style="margin-top: 50px;">Let's Talk</h2>
@@ -1565,3 +1173,6 @@
 </body>
 
 </html>
+
+
+

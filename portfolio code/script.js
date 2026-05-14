@@ -115,46 +115,26 @@ function animate() {
 
 animate();
 
-// --- Scroll Triggered Video Animation ---
+// Scroll video replaced with Vimeo embed — no play/pause control needed
 const videoContainer = document.querySelector('.video-container');
-const scrollVideo = document.getElementById('scrollVideo');
 let isVideoRevealed = false;
 
-if (videoContainer && scrollVideo) {
+if (videoContainer) {
     const videoObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // When user scrolls to the section
                 videoContainer.classList.add('active');
-                
-                // Play and fade in video slightly after container scales up
                 setTimeout(() => {
-                    scrollVideo.classList.add('playing');
-                    scrollVideo.play().catch(e => console.log('Autoplay prevented', e));
-                    
-                    // Enable 3D tilt tracking right after scale finishes entering
-                    setTimeout(() => {
-                        videoContainer.classList.add('interactive');
-                        isVideoRevealed = true;
-                    }, 500); 
+                    videoContainer.classList.add('interactive');
+                    isVideoRevealed = true;
                 }, 600);
             } else {
-                // When container leaves viewport (up or down)
-                videoContainer.classList.remove('active');
-                videoContainer.classList.remove('interactive');
+                videoContainer.classList.remove('active', 'interactive');
                 isVideoRevealed = false;
-                videoContainer.style.transform = ''; // Clear custom styles
-                scrollVideo.classList.remove('playing');
-                
-                setTimeout(() => {
-                    scrollVideo.pause();
-                }, 1000); // Wait for fade out transition before pausing
+                videoContainer.style.transform = '';
             }
         });
-    }, { 
-        threshold: 0.3 // Trigger when 30% of the box is visible 
-    });
-
+    }, { threshold: 0.3 });
     videoObserver.observe(videoContainer);
 }
 
@@ -239,22 +219,8 @@ filterBtns.forEach(btn => {
 
             const imgCategory = img.getAttribute('data-category');
             if (filterVal === 'all' || imgCategory === filterVal) {
-                img.style.display = ''; // Restore default display
-                // Resume video without restarting from beginning
-                const vid = img.querySelector('video');
-                if (vid) {
-                    if (vid._savedTime !== undefined) {
-                        vid.currentTime = vid._savedTime;
-                        delete vid._savedTime;
-                    }
-                    vid.play().catch(() => {});
-                }
+                img.style.display = '';
             } else {
-                // Save current playback position before hiding
-                const vid = img.querySelector('video');
-                if (vid) {
-                    vid._savedTime = vid.currentTime;
-                }
                 img.style.display = 'none';
             }
         });
@@ -285,61 +251,29 @@ galleryImages.forEach((img, index) => {
         img.style.transform = `translate(0px, 0px) scale(1)`;
     });
     
-    // Open modal on click
+    // Open modal on click — video cards open Vimeo link instead
     img.addEventListener('click', (e) => {
-        // Find if this is in video work section and check the active filter
         const gallerySection = img.closest('.gallery-section');
         const activeFilter = gallerySection ? gallerySection.querySelector('.filter-btn.active') : null;
         const filterVal = activeFilter ? activeFilter.getAttribute('data-filter') : 'all';
 
-        // Restriction: Preview modal only works on 'All Work' inside the video section
         if (gallerySection && (gallerySection.id === 'video-portfolio' || gallerySection.id === 'video-portfolio-overlay') && filterVal !== 'all') {
             return;
         }
 
-        if (modal) {
+        if (modal && modalImg) {
             currentModalIndex = index;
-            
-            const videoElem = img.querySelector('video source');
-            
-            if (videoElem && modalVideo) {
-                if(modalImg) modalImg.style.display = 'none';
-                modalVideo.style.display = 'block';
-                modalVideo.src = videoElem.src;
-                modalVideo.play();
-            } else if (modalImg) {
-                if(modalVideo) { 
-                    modalVideo.style.display = 'none';
-                    modalVideo.pause();
-                }
+            if (img.tagName === 'IMG') {
+                if (modalVideo) { modalVideo.style.display = 'none'; modalVideo.pause(); }
                 modalImg.style.display = 'block';
                 modalImg.src = img.src;
+                modal.classList.add('show');
             }
-            modal.classList.add('show');
+            // Vimeo video cards: do nothing (no local src to show in modal)
         }
     });
 
-    // Audio Toggle Logic for Individual Thumbnails
-    const audioBtn = img.querySelector('.audio-btn');
-    if (audioBtn) {
-        audioBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Don't trigger the modal if we're in 'All' view
-            const video = img.querySelector('video');
-            if (video) {
-                video.muted = !video.muted;
-                const muteIcon = audioBtn.querySelector('.mute-icon');
-                const unmuteIcon = audioBtn.querySelector('.unmute-icon');
-                
-                if (video.muted) {
-                    muteIcon.style.display = 'block';
-                    unmuteIcon.style.display = 'none';
-                } else {
-                    muteIcon.style.display = 'none';
-                    unmuteIcon.style.display = 'block';
-                }
-            }
-        });
-    }
+    // Audio toggle removed — videos are now Vimeo iframes
 });
 
 // Close modal logic
@@ -557,33 +491,83 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 4500); // Increased wait time to 4.5s
 });
 
-// --- Edits Early Loop Control ---
-const editsWorkItems = document.querySelectorAll('.interactive-img[data-category="edits"]');
-editsWorkItems.forEach(item => {
-    const v = item.querySelector('video');
-    if (v) {
-        v.addEventListener('timeupdate', () => {
-            // Loop back 6 seconds before actual end
-            if (v.duration > 6 && v.currentTime >= v.duration - 6) {
-                v.currentTime = 0;
-            }
-        });
-    }
-});
+// Video loop controls removed — videos are now Vimeo iframes
 
-// --- Long Form & Stream Overlay Early Loop Control ---
-const horizontalWorkItems = document.querySelectorAll('.interactive-img[data-category="long-form"], .interactive-img[data-category="stream-overlay"]');
-horizontalWorkItems.forEach(item => {
-    const v = item.querySelector('video');
-    if (v) {
-        v.addEventListener('timeupdate', () => {
-            // Loop back 5 seconds before actual end
-            if (v.duration > 5 && v.currentTime >= v.duration - 5) {
-                v.currentTime = 0;
+// --- Vimeo Sound Toggle ---
+(function initVimeoSound() {
+    const MUTE_SVG = `<svg class="icon-muted" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+    </svg>`;
+    const SOUND_SVG = `<svg class="icon-sound" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+    </svg>`;
+
+    let activePlayer = null;   // track currently unmuted player
+    let activeBtn = null;
+
+    function muteActive() {
+        if (activePlayer) {
+            activePlayer.setVolume(0).catch(() => {});
+            activePlayer = null;
+        }
+        if (activeBtn) {
+            activeBtn.classList.remove('unmuted');
+            activeBtn = null;
+        }
+    }
+
+    // Wait for DOM + Vimeo SDK to be ready
+    document.querySelectorAll('.interactive-img .vimeo-embed iframe').forEach(iframe => {
+        const card = iframe.closest('.interactive-img');
+        if (!card) return;
+
+        // Inject button
+        const btn = document.createElement('button');
+        btn.className = 'sound-btn';
+        btn.title = 'Toggle Sound';
+        btn.innerHTML = MUTE_SVG + SOUND_SVG;
+        card.appendChild(btn);
+
+        // Init Vimeo Player SDK instance
+        let player = null;
+        let ready = false;
+
+        function getPlayer() {
+            if (!player) {
+                player = new Vimeo.Player(iframe);
+                player.ready().then(() => { ready = true; }).catch(() => {});
+            }
+            return player;
+        }
+
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const p = getPlayer();
+            if (!ready) return;
+
+            const isMuted = !btn.classList.contains('unmuted');
+
+            if (isMuted) {
+                // Mute previously active first
+                if (activeBtn && activeBtn !== btn) muteActive();
+                p.setVolume(1).then(() => {
+                    btn.classList.add('unmuted');
+                    activePlayer = p;
+                    activeBtn = btn;
+                }).catch(() => {});
+            } else {
+                p.setVolume(0).then(() => {
+                    btn.classList.remove('unmuted');
+                    activePlayer = null;
+                    activeBtn = null;
+                }).catch(() => {});
             }
         });
-    }
-});
+
+        // Pre-init player lazily when card is hovered
+        card.addEventListener('mouseenter', () => { getPlayer(); }, { once: true });
+    });
+})();
 
 // Apply initial active filters on page load to hide unrelated items
 document.querySelectorAll('.gallery-section').forEach(section => {
